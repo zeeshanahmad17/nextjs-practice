@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 type Props = {
 	params: {
 		productId: string;
@@ -24,7 +25,12 @@ export const generateMetadata = ({ params }: Props): Metadata => {
 // 	};
 // };
 const ProductDetailPage = ({ params }: Props) => {
-	return <h4>Product Details of Product {params.productId}</h4>;
+	return (
+		<>
+			<Link href={'/products'}>Go Back</Link>
+			<h4>Product Details of Product {params.productId}</h4>
+		</>
+	);
 };
 
 export default ProductDetailPage;

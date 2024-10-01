@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import './globals.css';
+
 export const metadata: Metadata = {
 	title: {
 		absolute: '',
@@ -13,7 +15,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang='en'>
 			<body>
 				<div style={{ backgroundColor: 'lightcyan', padding: '20px' }}>
-					<h2 style={{ textAlign: 'center' }}>Header</h2>
+					<h2 style={{ textAlign: 'center' }} className='text-red-700'>
+						Header
+					</h2>
 				</div>
 				{children}
 				<div style={{ backgroundColor: 'lightcyan', padding: '20px', marginTop: '50px' }}>
